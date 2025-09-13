@@ -217,21 +217,26 @@
           <p class="mt-4 text-xs text-gray-500">Tip: If you receive unexpected contact, cross-check the sender on this page or forward suspicious messages to <a href="mailto:security@haridragroups.example" class="underline">security@haridragroups.example</a>.</p>
         </div>
 
-        <div class="bg-white p-6 rounded-xl border shadow-sm">
-          <h3 class="font-semibold">Verification widget</h3>
-          <p class="text-sm text-gray-600 mt-2">Enter the domain, email or phone you were contacted from and we'll tell you if it matches any official channels (demo).</p>
+        <div class="bg-white p-6 rounded-xl border shadow-sm max-w-md w-full">
+  <h3 class="font-semibold">Verification Widget</h3>
+  <p class="text-sm text-gray-600 mt-2">
+    Enter the domain, email or phone you were contacted from and we'll tell you if it matches any official channels (demo).
+  </p>
 
-          <div class="mt-4">
-            <label class="text-sm font-medium">Enter email, phone or domain</label>
-            <input id="verifyInput" class="mt-2 w-full p-3 rounded-md border" placeholder="e.g. john@haridragroups.example or +911234567890 or scam-site.com" />
-            <button id="verifyBtn" class="mt-3 w-full p-3 rounded-md bg-teal-600 text-white">Verify</button>
+  <div class="mt-4">
+    <label class="text-sm font-medium">Enter email, phone or domain</label>
+    <input id="verifyInput" class="mt-2 w-full p-3 rounded-md border" 
+           placeholder="e.g. john@haridragroups.example or +911234567890 or scam-site.com" />
+    <button id="verifyBtn" class="mt-3 w-full p-3 rounded-md bg-teal-600 text-white">Verify</button>
 
-            <div id="verifyResult" class="mt-3 text-sm"></div>
+    <div id="verifyResult" class="mt-3 text-sm"></div>
 
-            <p class="mt-4 text-xs text-gray-500">Note: This demo uses a small official-channel list embedded in the page. In production, wire this to a server-side source and include a tamper-proof signature for trust.</p>
-          </div>
-        </div>
-      </div>
+    <p class="mt-4 text-xs text-gray-500">
+      Note: This demo uses a small official-channel list embedded in the page. In production, wire this to a server-side source and include a tamper-proof signature for trust.
+    </p>
+  </div>
+</div>
+</div>
 
       <!-- ORM / Trust-building features -->
       <div class="mt-8 grid sm:grid-cols-2 gap-6">
@@ -381,6 +386,86 @@
   },{threshold:0.12});
   document.querySelectorAll('section, article').forEach(el=> io.observe(el));
 
+</script>
+
+<!-- Verification Script -->
+  <script>
+// ✅ Hardcoded official people/channels
+const people = [
+  {
+    id: 1,
+    name: "Amit Sharma",
+    phone: "+919812345678",
+    email: "amit.sharma@haridragroups.example",
+    domain: "haridragroups.example",
+    status: "working with us",
+  },
+  {
+    id: 2,
+    name: "Neha Verma",
+    phone: "+919876543210",
+    email: "neha.verma@haridragroups.example",
+    domain: "haridragroups.example",
+    status: "not working with us",
+  },
+];
+
+// ✅ Your official WhatsApp number (include country code, no spaces/dashes)
+const officialWhatsApp = "+916384463381"; // <-- replace with your number
+
+document.getElementById("verifyBtn").addEventListener("click", verifyPerson);
+
+function verifyPerson() {
+  const query = document.getElementById("verifyInput").value.trim().toLowerCase();
+  const resultBox = document.getElementById("verifyResult");
+
+  if (!query) {
+    resultBox.innerHTML = "<p class='text-red-600'>⚠️ Please enter details to verify.</p>";
+    return;
+  }
+
+  const person = people.find(
+    (p) =>
+      p.name.toLowerCase() === query ||
+      p.phone.toLowerCase() === query ||
+      p.email.toLowerCase() === query ||
+      p.domain.toLowerCase() === query
+  );
+
+  if (person) {
+    resultBox.innerHTML = `
+      <div class="p-4 border rounded bg-green-100 shadow">
+        <p><strong>Name:</strong> ${person.name}</p>
+        <p><strong>Email:</strong> ${person.email}</p>
+        <p><strong>Phone:</strong> ${person.phone}</p>
+        <p><strong>Domain:</strong> ${person.domain}</p>
+        <p><strong>Status:</strong> ${person.status}</p>
+      </div>
+    `;
+  } else {
+    const deviceInfo = navigator.userAgent;
+    const pageUrl = window.location.href;
+
+    const reportMessage = `Warning Haridra Groups!!!
+    
+Suspicious contact: "${query}"
+They claim to be from Haridra Groups. Please investigate.
+
+I'm submitting this report from Page URL:
+${pageUrl}`;
+
+    resultBox.innerHTML = `
+      <div class="p-4 border rounded bg-red-100 shadow">
+        <p>⚠️ No official record found for "${query}". Please be cautious.</p>
+        <a href="https://wa.me/${officialWhatsApp}?text=${encodeURIComponent(reportMessage)}" 
+           target="_blank"
+           class="mt-2 inline-block bg-green-600 text-white px-3 py-2 rounded">
+           Report this person on WhatsApp
+        </a>
+      </div>
+    `;
+  }
+}
 </script>
 
 <!-- Small animation utilities using Tailwind classes + keyframes (keep minimal for performance) -->
