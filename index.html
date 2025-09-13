@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haridra Groups — Consulting • Development • Design • Commerce • HR</title>
+  <meta name="description" content="Haridra Groups: multi-domain company offering consulting, development, design, commerce, HR and more. Official website — beware of fraudsters. Verify official channels here." />
+  <link rel="canonical" href="https://www.haridragroups.example/" />
+
+  <!-- SEO/Open Graph -->
+  <meta property="og:title" content="Haridra Groups — Consulting, Development, Design, Commerce, HR" />
+  <meta property="og:description" content="Official website of Haridra Groups. Multiple domain subsidiaries: consulting, development, design, commerce, HR. Verify official channels and beware of fraudsters." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.haridragroups.example/" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CDN (for prototyping). For production use generated CSS to reduce size. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles */
+    :root{ --accent: #0ea5a4; }
+    [data-reduced-motion="true"] *{ animation: none !important; transition: none !important; }
+  </style>
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Haridra Groups",
+    "url": "https://www.haridragroups.example/",
+    "logo": "https://www.haridragroups.example/assets/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/haridra-groups",
+      "https://twitter.com/haridragroups"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+91-XXXXXXXXXX",
+      "contactType": "customer service",
+      "areaServed": "IN"
+    }]
+  }
+  </script>
+
+  <!-- Basic performance hints -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body class="antialiased text-gray-800 bg-white leading-relaxed">
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-sm border-b">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#home" class="flex items-center gap-3"> 
+        <img src="https://i.ibb.co/fV0jx5tV/hr-manager.png" alt="Haridra Groups logo" class="h-10 w-10 object-contain rounded-md" />
+        <span class="text-lg font-semibold">Haridra Groups</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="#services" class="hover:text-teal-600">Services</a>
+        <a href="#companies" class="hover:text-teal-600">Our Companies</a>
+        <a href="#trust" class="hover:text-teal-600">Trust & Verify</a>
+        <a href="#careers" class="hover:text-teal-600">Careers</a>
+        <a href="#contact" class="rounded-md px-4 py-2 bg-teal-50 border text-teal-700">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobileBtn" aria-expanded="false" aria-controls="mobileMenu" class="p-2 rounded-md focus:outline-none focus:ring">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden border-t">
+    <div class="px-4 py-4 flex flex-col gap-3">
+      <a href="#services">Services</a>
+      <a href="#companies">Our Companies</a>
+      <a href="#trust">Trust & Verify</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact" class="inline-block mt-2 px-4 py-2 bg-teal-50 rounded">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold">Haridra Groups</h1>
+      <p class="mt-4 text-lg text-gray-600">A multi-domain company building consulting, development, design, commerce and HR solutions. Unified culture — specialist companies.</p>
+
+      <div class="mt-6 flex gap-3">
+        <a href="#contact" class="inline-flex items-center px-5 py-3 bg-teal-600 text-white rounded-md shadow hover:scale-[1.02] transition">Get in touch</a>
+        <a href="#trust" class="inline-flex items-center px-5 py-3 border rounded-md hover:bg-gray-50 transition">Verify us</a>
+      </div>
+
+      <ul class="mt-8 grid grid-cols-2 gap-3 text-sm text-gray-500">
+        <li>✅ Award-winning design system</li>
+        <li>✅ Fast & SEO-first architecture</li>
+        <li>✅ Mobile & desktop responsive</li>
+        <li>✅ Official verification portal</li>
+      </ul>
+    </div>
+
+    <div class="order-first lg:order-last">
+      <!-- Decorative mockup / image -->
+      <div class="rounded-2xl p-6 shadow-lg border border-gray-100">
+        <img src="https://i.ibb.co/QvqLXSbS/goc.jpg" alt="Website mockup" loading="lazy" class="w-full rounded-md" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold">What we do</h2>
+      <p class="text-gray-600 mt-1">Expert teams in each domain delivering end-to-end solutions.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service card -->
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">Consulting</h3>
+          <p class="mt-2 text-sm text-gray-600">Strategy, business transformation and advisory services.</p>
+          <a href="/consulting" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">Development</h3>
+          <p class="mt-2 text-sm text-gray-600">Product engineering, cloud and mobile development.</p>
+          <a href="/development" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">Design</h3>
+          <p class="mt-2 text-sm text-gray-600">Brand, product UX/UI and motion design.
+          </p>
+          <a href="/design" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">Commerce</h3>
+          <p class="mt-2 text-sm text-gray-600">Ecommerce platforms, marketplaces, payments.</p>
+          <a href="/commerce" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">HR Services</h3>
+          <p class="mt-2 text-sm text-gray-600">Recruitment, payroll & HR tech solutions.</p>
+          <a href="/hr" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+          <h3 class="font-semibold">Academy & Events</h3>
+          <p class="mt-2 text-sm text-gray-600">Training, workshops and community events.</p>
+          <a href="/academy" class="mt-4 inline-block text-teal-600 text-sm">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Companies (subsidiaries) -->
+  <section id="companies" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold">Our Companies</h2>
+    <p class="text-gray-600 mt-1">Specialised companies under Haridra Groups umbrella.</p>
+
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Example company card. Duplicate for each subsidiary. -->
+      <article class="p-6 rounded-xl border bg-white hover:shadow transition">
+        <img src="https://i.ibb.co/Rmdcdt7/cc-2.jpg" alt="Haridra Consulting logo" class="h-14" loading="lazy" />
+        <h3 class="mt-4 font-medium">Haridra Consulting</h3>
+        <p class="mt-2 text-sm text-gray-600">Business & transformation consultancy.</p>
+        <a href="/companies/consulting" class="mt-4 inline-block text-teal-600 text-sm">Visit →</a>
+      </article>
+
+      <article class="p-6 rounded-xl border bg-white hover:shadow transition">
+        <img src="https://d6fiz9tmzg8gn.cloudfront.net/wp-content/uploads/2023/02/know-productengineering-blog-img2.jpg" alt="Haridra Development logo" class="h-14" loading="lazy" />
+        <h3 class="mt-4 font-medium">Haridra Development</h3>
+        <p class="mt-2 text-sm text-gray-600">Product engineering & cloud services.</p>
+        <a href="/companies/development" class="mt-4 inline-block text-teal-600 text-sm">Visit →</a>
+      </article>
+
+      <article class="p-6 rounded-xl border bg-white hover:shadow transition">
+        <img src="https://i.ibb.co/1YTrYTcM/bpds.jpg" alt="Haridra Design logo" class="h-14" loading="lazy" />
+        <h3 class="mt-4 font-medium">Haridra Design</h3>
+        <p class="mt-2 text-sm text-gray-600">Brand & product design studio.</p>
+        <a href="/companies/design" class="mt-4 inline-block text-teal-600 text-sm">Visit →</a>
+      </article>
+
+      <!-- Add more company cards as needed -->
+    </div>
+  </section>
+
+  <!-- Trust & Verify (ORM + Anti-Fraud) -->
+  <section id="trust" class="bg-teal-50/40 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 rounded-2xl">
+      <h2 class="text-2xl font-bold">Official Notice & Verification Center</h2>
+      <p class="text-gray-700 mt-2">This site is the only official website of Haridra Groups. Beware of fraudsters who claim they are from Haridra Groups. Use the verification center below to confirm official channels.</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-6 items-start">
+        <div class="bg-white p-6 rounded-xl border shadow-sm">
+          <h3 class="font-semibold">How to verify</h3>
+          <ol class="mt-2 text-sm text-gray-600 list-decimal pl-5">
+            <li>Official domains always use <strong>haridragroups.example</strong> or approved subdomains.</li>
+            <li>Official email addresses end with <code>@haridragroups.example</code>.</li>
+            <li>We will never ask for upfront payments through unverified personal accounts — always use the business invoice sent from the official email.</li>
+            <li>Call our verified phone numbers listed on this website's Contact page.</li>
+          </ol>
+
+          <p class="mt-4 text-xs text-gray-500">Tip: If you receive unexpected contact, cross-check the sender on this page or forward suspicious messages to <a href="mailto:security@haridragroups.example" class="underline">security@haridragroups.example</a>.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border shadow-sm">
+          <h3 class="font-semibold">Verification widget</h3>
+          <p class="text-sm text-gray-600 mt-2">Enter the domain, email or phone you were contacted from and we'll tell you if it matches any official channels (demo).</p>
+
+          <div class="mt-4">
+            <label class="text-sm font-medium">Enter email, phone or domain</label>
+            <input id="verifyInput" class="mt-2 w-full p-3 rounded-md border" placeholder="e.g. john@haridragroups.example or +911234567890 or scam-site.com" />
+            <button id="verifyBtn" class="mt-3 w-full p-3 rounded-md bg-teal-600 text-white">Verify</button>
+
+            <div id="verifyResult" class="mt-3 text-sm"></div>
+
+            <p class="mt-4 text-xs text-gray-500">Note: This demo uses a small official-channel list embedded in the page. In production, wire this to a server-side source and include a tamper-proof signature for trust.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORM / Trust-building features -->
+      <div class="mt-8 grid sm:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl border shadow-sm">
+          <h3 class="font-semibold">Public statements & takedown log</h3>
+          <p class="mt-2 text-sm text-gray-600">Maintain a transparent, searchable log of fraud alerts, takedowns and official statements. This helps search engines, partners and customers verify authenticity.</p>
+          <a href="/trust/log" class="mt-3 inline-block text-teal-600 text-sm">View log →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border shadow-sm">
+          <h3 class="font-semibold">Verified badges & digital signatures</h3>
+          <p class="mt-2 text-sm text-gray-600">Issue cryptographic signatures on PDF invoices and use signed JWTs for API responses — show verification badges on official pages & emails.</p>
+          <a href="/trust/badges" class="mt-3 inline-block text-teal-600 text-sm">How it works →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Case studies / Gallery (for awards) -->
+  <section id="work" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold">Selected Work & Awards</h2>
+    <p class="text-gray-600 mt-1">Showcase measurable impact, metrics and awards (structured for rich results).</p>
+
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Example case study card -->
+      <article class="bg-white p-6 rounded-xl border shadow-sm">
+        <img src="https://cdn.prod.website-files.com/5dfbb65fcb94d5455876bad9/675b421dff6e632f169b41db_CRO_Hero_image.webp" alt="Case study image" class="rounded-md w-full h-40 object-cover" loading="lazy" />
+        <h3 class="mt-4 font-semibold">Project Name — 3x conversion lift</h3>
+        <p class="mt-2 text-sm text-gray-600">Short blurb and metrics. Link to full case study page with structured data (CreativeWork).</p>
+        <a href="/work/project-1" class="mt-3 inline-block text-teal-600 text-sm">Read case study →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ with FAQ schema (example) -->
+  <section id="faq" class="bg-white py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold">Frequently asked questions</h2>
+      <div class="mt-4 space-y-3" id="faqList">
+        <details class="p-4 border rounded-lg">
+          <summary class="font-medium">Is this the official Haridra Groups website?</summary>
+          <div class="mt-2 text-gray-600 text-sm">Yes — this is the only official website. Always verify contact information using our Trust & Verify page.</div>
+        </details>
+        <details class="p-4 border rounded-lg">
+          <summary class="font-medium">How do I report fraud?</summary>
+          <div class="mt-2 text-gray-600 text-sm">Forward suspected messages to <a href="mailto:security@haridragroups.example">security@haridragroups.example</a> and use the contact form.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer CTA -->
+  <section id="contact" class="py-12 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold">Get in touch</h2>
+      <p class="text-gray-600 mt-1">Work enquiries, partnerships or to report suspicious activity.</p>
+
+      <form class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4" onsubmit="return submitForm(event)">
+        <input name="name" required placeholder="Your name" class="p-3 rounded-md border" />
+        <input name="email" type="email" required placeholder="Email" class="p-3 rounded-md border" />
+        <input name="company" placeholder="Company (optional)" class="p-3 rounded-md border" />
+        <textarea name="message" required placeholder="Message" class="p-3 rounded-md border col-span-1 sm:col-span-2"></textarea>
+        <button type="submit" class="p-3 rounded-md bg-teal-600 text-white col-span-1 sm:col-span-2">Send message</button>
+      </form>
+
+      <p class="mt-4 text-xs text-gray-500">We will only contact you from official <code>@haridragroups.example</code> addresses. See Trust & Verify.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="border-t mt-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid md:grid-cols-3 gap-6">
+    <div>
+      <img src="hr-manager.png" alt="Haridra logo" class="h-10" />
+      <p class="text-sm text-gray-600 mt-3">© <span id="year"></span> Haridra Groups. All rights reserved.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold">Quick links</h4>
+      <ul class="mt-2 text-sm text-gray-600 space-y-1">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold">Contact</h4>
+      <p class="text-sm text-gray-600 mt-2">Email: <a href="mailto:contact@haridragroups.example">contact@haridragroups.example</a></p>
+      <p class="text-sm text-gray-600">Phone: +91-XXXXXXXXXX</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts: Interaction, Accessibility, SEO helpers -->
+<script>
+  // small utilities
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu
+  const mobileBtn = document.getElementById('mobileBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileBtn.addEventListener('click', ()=>{
+    const open = mobileMenu.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!open));
+  });
+
+  // reduced motion support
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.setAttribute('data-reduced-motion','true');
+  }
+
+  // simple verify demo (replace with server lookup in production)
+  const officialList = [
+    'support@haridragroups.example',
+    'contact@haridragroups.example',
+    '+911234567890',
+    'haridragroups.example',
+    'dev.haridragroups.example'
+  ];
+
+  document.getElementById('verifyBtn').addEventListener('click', ()=>{
+    const v = document.getElementById('verifyInput').value.trim().toLowerCase();
+    const res = document.getElementById('verifyResult');
+    if(!v){ res.innerHTML = '<span class="text-red-600">Please enter a value to verify.</span>'; return; }
+    const ok = officialList.some(x => v === x || v.endsWith('@'+x) || v.includes(x));
+    if(ok) res.innerHTML = '<span class="text-green-700 font-semibold">This matches an official channel. Still exercise caution — cross-check contact details on the official contact page.</span>';
+    else res.innerHTML = '<span class="text-red-700 font-semibold">No match found in official channels. Treat this source as unverified and report suspicious attempts to security@haridragroups.example.</span>';
+  });
+
+  // Form submit (demo) - best to use server-side anti-spam and transactional responses
+  function submitForm(e){
+    e.preventDefault();
+    alert('Thank you! Your message was submitted. (Demo)');
+    e.target.reset();
+    return false;
+  }
+
+  // Lazy reveal animations using IntersectionObserver
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('animate-fadeup'); io.unobserve(e.target); }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('section, article').forEach(el=> io.observe(el));
+
+</script>
+
+<!-- Small animation utilities using Tailwind classes + keyframes (keep minimal for performance) -->
+<style>
+  @keyframes fadeup { from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: none;} }
+  .animate-fadeup{ animation: fadeup 600ms cubic-bezier(.2,.9,.2,1) both; }
+</style>
+
+</body>
+</html>
